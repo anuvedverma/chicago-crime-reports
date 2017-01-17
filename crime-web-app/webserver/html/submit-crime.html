@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+  <head>
+    <title>Submit Crime Info</title>
+    <link type="text/css" rel="stylesheet" href="elegant-aero.css" />
+  </head>
+  <!-- Thanks to Mario C. E. Freese <mcefreese@gmail.com> for permission to use background image -->
+  <body style='background-image:URL("white-background.jpg");background-repeat:no-repeat;background-position:center top;-webkit-background-size:100%;-moz-background-size:100%;-o-background-size:100%;background-size: 100%;'>
+    <p style="margin-bottom:5px"/>
+    <h2 class="elegant-aero" style="margin-left:30%;text-align:center;display:inline-block;color:#5E5E5E;background:#FFFFFF">&nbsp;Submit crime report&nbsp;</h2>
+    <form action="/cgi-bin/anuvedverma/submit-crime.pl" style="background:#FFFFFF;width:60%;margin:auto"  method="get" class="elegant-aero">
+
+	<!-- Crime Type -->
+	<label> 
+	<span><b>Crime Type:</b></span>
+	</label>
+	<br/>
+	<ul class="radio-grid">
+		<li><input type="radio" name="crime_type" value="ARSON">Arson</input></li>
+		<li><input type="radio" name="crime_type" value="ASSAULT">Assault</input></li>
+		<li><input type="radio" name="crime_type" value="BATTERY">Battery</input></li>
+		<li><input type="radio" name="crime_type" value="BURGLARY">Burglary</input></li>
+	</ul>
+	<ul class="checkbox-grid">
+		<li><input type="radio" name="crime_type" value="CRIMINAL TRESPASS">Trespassing</input></li>
+		<li><input type="radio" name="crime_type" value="GAMBLING">Gambling</input></li>
+		<li><input type="radio" name="crime_type" value="HOMICIDE">Homicide</input></li>
+		<li><input type="radio" name="crime_type" value="KIDNAPPING">Kidnapping</input></li>
+	</ul>
+	<ul class="checkbox-grid">
+		<li><input type="radio" name="crime_type" value="LIQUOR LAW VIOLATION">Liquor Violation</input></li>
+		<li><input type="radio" name="crime_type" value="MOTOR VEHICLE THEFT">Motor Vehicle Theft</input></li>
+		<li><input type="radio" name="crime_type" value="NARCOTICS">Narcotics</input></li>
+		<li><input type="radio" name="crime_type" value="PROSTITUTION">Prostitution</input></li>
+	</ul>
+	<ul class="checkbox-grid">
+		<li><input type="radio" name="crime_type" value="ROBBERY">Robbery</input></li>
+		<li><input type="radio" name="crime_type" value="CRIM SEXUAL ASSAULT">Sexual Assault</input></li>
+		<li><input type="radio" name="crime_type" value="THEFT">Theft</input></li>
+		<li><input type="radio" name="crime_type" value="WEAPONS VIOLATION">Weapons Violation</input></li>
+	</ul>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+
+	<!-- Crime Street -->
+	<label> 
+	<span><b>Crime Street:</b></span>
+	</label>
+	<input type="text" name="crime_street" value="E 50TH PL"/>
+	<br/>
+	<br/>
+
+	<!-- Crime Location Type -->
+	<label> 
+	<span><b>Crime Location Type:</b></span>
+	</label>
+	<input type="text" name="crime_location_type" value="APARTMENT"/>
+	<br/>	
+	<br/>
+
+      <label>
+	<span>&nbsp;</span><input type="submit" value="Submit">
+      </label>
+    </form>
+    <iframe frameBorder="0" name="results_iframe" style="width:100%"/>
+  </body>
+</html>

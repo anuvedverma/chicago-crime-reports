@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+  <head>
+    <title>Crime Reports</title>
+    <link type="text/css" rel="stylesheet" href="elegant-aero.css" />
+  </head>
+  <!-- Thanks to Mario C. E. Freese <mcefreese@gmail.com> for permission to use background image -->
+  <body style='background-image:URL("crime-background.jpg");background-repeat:no-repeat;background-position:center top; -webkit-background-size:100%;-moz-background-size:100%;-o-background-size:100%;background-size: 100%;'>
+    <p style="margin-bottom:2cm"/>
+    <form action="/cgi-bin/anuvedverma/crime-report.py" style="width:900px;height:170px;margin:0 auto;padding-top=200px;background:#FFFFFF" method="get" target="results_iframe" class="elegant-aero">
+	<label>
+	<span>Crime Type:</span>
+	</label>
+	<br/>
+	<ul class="checkbox-grid">
+		<li><input type="checkbox" name="crime_type" value="ARSON">Arson</input></li>
+		<li><input type="checkbox" name="crime_type" value="ASSAULT">Assault</input></li>
+		<li><input type="checkbox" name="crime_type" value="BATTERY">Battery</input></li>
+		<li><input type="checkbox" name="crime_type" value="BURGLARY">Burglary</input></li>
+	</ul>
+	<ul class="checkbox-grid">
+		<li><input type="checkbox" name="crime_type" value="CRIMINAL TRESPASS">Trespassing</input></li>
+		<li><input type="checkbox" name="crime_type" value="GAMBLING">Gambling</input></li>
+		<li><input type="checkbox" name="crime_type" value="HOMICIDE">Homicide</input></li>
+		<li><input type="checkbox" name="crime_type" value="KIDNAPPING">Kidnapping</input></li>
+	</ul>
+	<ul class="checkbox-grid">
+		<li><input type="checkbox" name="crime_type" value="LIQUOR LAW VIOLATION">Liquor Violation</input></li>
+		<li><input type="checkbox" name="crime_type" value="MOTOR VEHICLE THEFT">Motor Vehicle Theft</input></li>
+		<li><input type="checkbox" name="crime_type" value="NARCOTICS">Narcotics</input></li>
+		<li><input type="checkbox" name="crime_type" value="PROSTITUTION">Prostitution</input></li>
+	</ul>
+	<ul class="checkbox-grid">
+		<li><input type="checkbox" name="crime_type" value="ROBBERY">Robbery</input></li>
+		<li><input type="checkbox" name="crime_type" value="CRIM SEXUAL ASSAULT">Sexual Assault</input></li>
+		<li><input type="checkbox" name="crime_type" value="THEFT">Theft</input></li>
+		<li><input type="checkbox" name="crime_type" value="WEAPONS VIOLATION">Weapons Violation</input></li>
+	</ul>
+
+	<label>
+	<span>
+	<input  type="submit" value="Submit">
+	</span>
+	</label>
+    </form>
+    <p style="margin-bottom:2cm"/>
+
+    <iframe frameBorder="0" name="results_iframe" style="display:block;width:70%;height:100%;margin-left:auto;margin-right:auto"/>
+  </body>
+</html>
