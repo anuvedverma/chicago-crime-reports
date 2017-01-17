@@ -27,14 +27,22 @@ Live demos of the project can be viewed at the following URLs:
 
 
 To reproduce this project on the cluster, do the following:
+
 1. On the `hdp-m` cluster, run the `step1-crimes.pig` script provided under the `crime-web-app/hdp-m/` directory. This script uses `anuvedverma_chicago_crimes.csv`, located in the `/inputs` directory of `hdp-m`'s hadoop cluster.
+
 2. On `hdp-m`, run the following commands in HBase to create the appropriate tables:
+
 	* `create 'anuvedverma_crimes_by_type', 'crime_type:count'`
 	* `create 'anuvedverma_crimes_by_street', 'crime_street:count'`
 	* `create 'anuvedverma_crimes_by_location_type', 'crime_location_type:count'`
 	* `create 'anuvedverma_crimes_by_type_and_loctype', 'crime_type_loctype:count'`
+
 3. On `hdp-m`, run the `chicago_crimes.pig` script provided under the `crime-web-app/hdp-m/` directory.
+
 4. Place all the files provided under the `crimes-web-app/webserver/cgi-bin` directory onto the `webserver` cluster, under `/usr/lib/cgi-bin/anuvedverma`.
+
 5. Place all the files provided under the `crimes-web-app/webserver/html` directory onto the `webserver` cluster, under `/var/www/html/anuvedverma`.
+
 6. On `hdp-m`, create the appropriate Kafka topic with the following command: `kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic anuvedverma-crime-event`
+
 7. On `webserver`, run the following command: `nohup python /usr/lib/cgi-bin/anuvedverma/consume-kafka.py &`. This sets up Python script to run in the background and listening for new Kafka messages in our topic.
