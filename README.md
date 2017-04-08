@@ -1,7 +1,7 @@
 # Table of Contents
 
-1. [Overview] (README.md#overview)
-2. [Instructions] (README.md#instructions)
+1. [Overview](README.md#overview)
+2. [Instructions](README.md#instructions)
 
 
 ## Overview
